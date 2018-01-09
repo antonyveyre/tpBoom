@@ -13,11 +13,11 @@ function detonateClick() {
 
   // 1) Générer deux nombres aléatoire entre 0 et 10
 
-   let rand1 = getRandomArbitrary(1,4);
-   let rand2 = getRandomArbitrary(1,4);
+  let rand1 = getRandomArbitrary(1,4);
+  let rand2 = getRandomArbitrary(1,4);
 
   // 2) Poser la question avec window.prompt : rand1 + rand2 ?
-   let answer= window.prompt(rand1+'+'+rand2+'=');
+  let answer= window.prompt(rand1+'+'+rand2+'=');
 
   //3) Tester la réponse
   if (answer == rand1+rand2){
@@ -27,9 +27,7 @@ function detonateClick() {
 
   } else {
     if (answer==null){
-//      window.alert('operation anulé');
-      counter();
-
+      window.alert('operation anulé');
     }
     else {
       window.alert('mauvaise reponse !!!');
@@ -45,14 +43,14 @@ function counter() {
   let counterDiv = document.querySelector('#counter');
   let n = 6;
   let interval = setInterval(() => {
-        n -=1;
-        if (n=='-1'){
-          clearInterval(interval);
-          counterTxt.textContent = '';
-          boom();
-          return;
-        }
-        counterTxt.textContent = n;
+    n -=1;
+    if (n=='-1'){
+      clearInterval(interval);
+      counterTxt.textContent = '';
+      boom();
+      return;
+    }
+    counterTxt.textContent = n;
 
   }, 1000);
 }
@@ -66,25 +64,14 @@ function boom() {
   let l = window.innerWidth/2;
   boomDiv.style.left = l+'px';
   boomDiv.style.top = t+'px';
-
-
-  // console.log(boomDiv.style.top);
-  // console.log(window.innerWidth);
-  // console.log(window.innerHeight);
-
-
   let interval = setInterval(() => {
     //increase the with and heigh of boomDiv
-    // console.log(boomDiv.style.top);
-    // console.log(boomDiv.style.left);
-
     boomDiv.style.margin = 'auto' ;
-
     boomDiv.style.top = t+'px';
     boomDiv.style.left = l+'px';
     boomDiv.style.width = s+'px';
     boomDiv.style.height = s+'px';
-  //  console.log(t);
+    //  console.log(t);
     s++;
     t=t-0.5;
     l=l-0.5;
@@ -106,11 +93,11 @@ function boom() {
 //5... 4 ... 3 ..
 /*
 function counter() {
-  let counterDiv = document.querySelector('#counter');
-  let n = 5;
-  let interval = setInterval(() => {
-    //complete
-  }, 1000);
+let counterDiv = document.querySelector('#counter');
+let n = 5;
+let interval = setInterval(() => {
+//complete
+}, 1000);
 }
 */
 
@@ -121,17 +108,17 @@ function counter() {
 // Ensuite augmenter la largeur et hauteur de la div pour simuler la bombe (use setInterval again)
 /*
 function boom() {
-  let s =10;
-  let boomDiv = document.querySelector('#boom');
-  boomDiv.style.display = 'block';
-  // boomDiv.style.left =
-  // boomDiv.style.top =
+let s =10;
+let boomDiv = document.querySelector('#boom');
+boomDiv.style.display = 'block';
+// boomDiv.style.left =
+// boomDiv.style.top =
 
 
-  let interval = setInterval(() => {
-    //increase the with and heigh of boomDiv
+let interval = setInterval(() => {
+//increase the with and heigh of boomDiv
 
-  }, 10);
+}, 10);
 }
 
- */
+*/
