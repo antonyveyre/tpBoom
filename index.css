@@ -1,0 +1,21 @@
+body,html {
+  position: relative;
+  height: 100%;
+}
+
+
+#boom {
+  position: absolute;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    display:none;
+    background: red;
+    border: 5px solid #A60000;
+    vertical-align: center;
+}
+
+#counter {
+  font-size: 50px;
+  font-family:tahoma;
+}
